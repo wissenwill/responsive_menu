@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Responsive Menu Icon</title>
+  <meta name="description" content="Responsive Menu Icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+#menu-icon {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  border: 1px dotted #000;
+  cursor: pointer;
+  padding: 18px 35px 20px 12px;
+}
+
+#menu-icon span, #menu-icon span:before, #menu-icon span:after {
+  border-radius: 1.5px;
+  height: 3px;
+  width: 24px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+
+#menu-icon span:before {
+  top: -7px;
+}
+
+#menu-icon span:after {
+  bottom: -7px;
+}
+
+#menu-icon span, #menu-icon span:before, #menu-icon span:after {
+  transition: all 100ms ease-in-out;
+}
+
+#menu-icon.active span {
+  background-color: transparent;
+}
+
+#menu-icon.active span:before, #menu-icon.active span:after {
+  top: 0;
+}
+
+#menu-icon.active span:before {
+  transform: rotate(45deg);
+}
+
+#menu-icon.active span:after {
+  transform: rotate(-45deg);
+}
+  </style>
+</head>
+
+<body>
+
+  <p>Responsive Menu Icon</p>
+
+  <a id="menu-icon" href="#"><span></span></a>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    document.querySelector( "#menu-icon" ).addEventListener( "click", function() {
+        this.classList.toggle( "active" );
+    });
+  </script>
+</body>
+</html>
